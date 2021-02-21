@@ -1,10 +1,10 @@
 class Ship
+  attr_accessor :name, :type, :booty
+  @@all = []
 
-    attr_accessor :name, :type, :booty
-
-    def initialize(attr)
-      @name = name
-      @weight = weight
+    def initialize(att)
+      @name = att[:pirate][:ship][:name]
+      @weight = type
       @height = height
 
       @@all << self

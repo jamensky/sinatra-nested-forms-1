@@ -2,14 +2,17 @@ require './environment'
 
   class App < Sinatra::Base
 
+    get '/' do
+
+    end
+
     get '/new' do
       erb :'pirates/new'
     end
 
     post '/show' do
-   binding.pry
-      p params
-      #@pirate = Pirate.new(params)
+      @pirate = Pirate.new(params)
+      binding.pry
       erb :'pirates/show'
     end
 
