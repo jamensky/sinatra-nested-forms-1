@@ -12,8 +12,13 @@ require './environment'
 
     post '/show' do
       @pirate = Pirate.new(params)
+
+      params.each do |sh|
+        @ship = Ship.new(params)
       binding.pry
+    end
       erb :'pirates/show'
     end
 
   end
+  

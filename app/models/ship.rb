@@ -3,9 +3,9 @@ class Ship
   @@all = []
 
     def initialize(att)
-      @name = att[:pirate][:ship][:name]
-      @weight = type
-      @height = height
+      @name = att[:pirate][:ship][0][:name]
+      @type = att[:pirate][:ship][0][:type]
+      @booty = att[:pirate][:ship][0][:booty]
 
       @@all << self
     end
